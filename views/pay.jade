@@ -1,0 +1,31 @@
+
+center
+  .docWrapper
+    .logoWrapper
+      a(href="/").logo
+    .doc
+      .where Where would you like to be redirected?
+      .options
+        - each x in options
+          a.option(href="#TODO")
+            table
+              tr
+                td.arrow
+                  &#x279F;
+                td.name
+                  = x.name
+                  - if (x.input)
+                    input(type="text", value="https://").customUrl
+                td.querystring
+                  - each part, i in queryParts
+                    - if (i == 0)
+                      | ?
+                    - else
+                      br
+                      | &
+                    span= part
+      .rememberBox
+        input(type="checkbox", checked).checkbox
+        | Use this choice automatically next time. (You can change it at 
+        a(href="/") btc.io/
+        | )
