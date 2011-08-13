@@ -7,7 +7,7 @@ a:hover{text-decoration:underline}
 .where{font-size:18px;font-weight:bold}
 .arrow{width:30px;text-align:center;font-size:30px;color:#999}
 .name{width:380px}
-.querystring{color:#777}
+.querystring{color:#777;font-size:12px}
 .options{padding:8px}
 .option{display:block;cursor:pointer;background:#fff1b1;border:solid 1px #dccf8c;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;padding:7px;margin:15px;font-family:Monaco;font-size:16px}
 .option:hover{background:#fdd79e}
