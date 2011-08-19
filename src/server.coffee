@@ -1,9 +1,20 @@
 
 fs = require 'fs'
+http = require 'http'
 express = require 'express'
+
 
 PORT = process.env.PORT or 3000
 DEBUG = ! process.env.PORT
+
+
+if not DEBUG
+  server = http.createServer (req, res) ->
+    # 301 Moved Permanently
+    res.writeHead 301, {'Location': "https://btc.io#{req.url}"}
+    res.end()
+  server.listen 80
+
 
 if DEBUG
   console.log "HTTP..."
