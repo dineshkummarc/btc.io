@@ -1,10 +1,19 @@
 
+fs = require 'fs'
 express = require 'express'
 
 PORT = process.env.PORT or 3000
 DEBUG = ! process.env.PORT
 
-app = express.createServer express.logger()
+if DEBUG
+  console.log "HTTP..."
+  app = express.createServer()
+else
+  console.log "HTTPS..."
+  app = express.createServer {
+    key:  fs.readFileSync "/home/a/btcio.pem"
+    cert: fs.readFileSync "/home/a/btcio.crt"
+  }
 
 app.set 'views', "#{__dirname}/../views"
 app.set 'view engine', 'jade'
