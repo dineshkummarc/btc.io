@@ -13,7 +13,8 @@ if not DEBUG
     # 301 Moved Permanently
     res.writeHead 301, {'Location': "https://btc.io#{req.url}"}
     res.end()
-  server.listen 80
+  server.listen 80, () ->
+    console.log "Listening on 80..."
 
 
 if DEBUG
