@@ -1,6 +1,10 @@
 body{margin:0;padding:0;background:#f3f3f3;font-family:"Liberation Sans","Lucida Sans",Calibri,sans-serif;font-size:13px;color:#191919}
 a{text-decoration:none}
 a:hover{text-decoration:underline}
+.slogan{font-size:16px;font-weight:bold}
+.urlType{margin:50px;width:100%}
+.urlType .L{font-size:40px;color:#777}
+.urlType .R{padding-left:50px}
 .docWrapper{margin-top:30px;width:800px}
 .logoWrapper{width:100%;text-align:left}
 .doc{width:100%;background:#fff;border:1px solid #d0d0d0;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;text-align:left;padding-left:27px;padding-top:20px;padding-bottom:20px}
