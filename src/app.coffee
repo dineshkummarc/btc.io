@@ -18,18 +18,17 @@ module.exports = (app) ->
         queryParts.push(k + "=" + querystring.escape(GET[k]))
     
     res.render 'pay', locals:
+      suffix: '?' + queryParts.join '&'
       queryParts: queryParts,
       options: [
         {
-          name: "webcoin.bitcoinjs.org"
+          name: "webcoin.ch"
+          url: "https://webcoin.ch"
         }
-        {
-          name: "instawallet.org"
-        }
-        {
-          name: "Custom: "
-          input: true
-        }
+        #{
+        #  name: "Custom: "
+        #  input: true
+        #}
       ]
   
   app.get '/logos', (req, res, next) ->
